@@ -10,7 +10,7 @@ const PlayerButton = ({ playingMusic, currentMusicPlaying, isPlaying, setisPlayi
       const color = codewithBracket.slice(0, codewithBracket.length - 1);
       const Findindex = song.findIndex((eachItem) => eachItem.title === playingMusic.title);
       return (
-            <div className="w-full flex items-center justify-between mt-4">
+            <div className="w-full md:px-10 lg:px-40 xl:px-52 flex items-center justify-around mt-4">
                   <span
                         onClick={() => {
                               Findindex > 0 ? runMusic(Findindex - 1) : runMusic(song.length - 1);

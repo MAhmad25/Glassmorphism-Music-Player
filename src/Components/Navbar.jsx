@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 import { SlPlaylist } from "react-icons/sl";
 import MusicList from "./MusicList";
-import { motion } from "motion/react";
 import { useRef } from "react";
+import { motion } from "motion/react";
 const Navbar = ({ runMusic, song, playingMusic }) => {
       const navBar = useRef(null);
       return (
@@ -12,6 +12,7 @@ const Navbar = ({ runMusic, song, playingMusic }) => {
                               Based on <span className={`${playingMusic.textColor} font-bold`}>{playingMusic.artist}</span>
                         </h1>
                         <motion.span
+                              className="sm:hidden"
                               onClick={() => {
                                     navBar.current.style.right = 0;
                               }}
@@ -19,7 +20,7 @@ const Navbar = ({ runMusic, song, playingMusic }) => {
                               <SlPlaylist size={"1.4rem"} />
                         </motion.span>
                   </section>
-                  <motion.div ref={navBar} initial={{ right: "-100%" }} className="z-50 transition-all ease-in-out duration-200 w-full h-screen absolute top-0">
+                  <motion.div ref={navBar} className="z-50 right-[-100%] sm:right-16 sm:top-24 transition-all ease-in-out duration-200 w-full sm:w-[40%] h-screen sm:h-[50%] absolute top-0">
                         <MusicList playingMusic={playingMusic} song={song} runMusic={runMusic} nav={navBar} />
                   </motion.div>
             </>

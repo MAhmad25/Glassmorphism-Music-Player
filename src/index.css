@@ -11,3 +11,6 @@ input[type="range"]::-moz-range-thumb {
 input[type="range"]::-ms-thumb {
       @apply w-5 h-5 bg-red-500 rounded-full cursor-pointer;
 }
+.nav::-webkit-scrollbar {
+      display: none;
+}

@@ -16,7 +16,7 @@ const RangeTimer = ({ playingMusic, currentMusicPlaying }) => {
       const totalMinutes = Math.floor(duration / 60).toFixed(0);
       return (
             <>
-                  <div className="flex flex-col justify-center items-center">
+                  <div className="flex md:w-full md:px-10 lg:px-40 xl:px-52  flex-col justify-center items-center">
                         <input
                               onChange={(e) => {
                                     currentMusicPlaying.currentTime = e.target.value;
