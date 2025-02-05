@@ -12,6 +12,7 @@ const Navbar = ({ runMusic, song, playingMusic }) => {
                               Based on <span className={`${playingMusic.textColor} font-bold`}>{playingMusic.artist}</span>
                         </h1>
                         <motion.span
+                              whileTap={{ scale: 0.7 }}
                               className="sm:hidden"
                               onClick={() => {
                                     navBar.current.style.right = 0;
