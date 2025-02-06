@@ -3,10 +3,10 @@ import MusicItems from "./MusicItems";
 import { motion } from "motion/react";
 import { MdOutlineClose } from "react-icons/md";
 
-const MusicList = ({ nav, song, playingMusic, runMusic }) => {
+const MusicList = ({ nav, songs, playingMusicInfo, runMusic }) => {
       return (
-            <motion.div className={`w-full nav relative h-full cursor-pointer overflow-x-hidden overflow-y-scroll  p-5 sm:bg-transparent ${playingMusic.bgColor}`}>
-                  <h1 className={`text-4xl mb-2 font-semibold tracking-tight ${playingMusic.textColor} rounded-3xl sm:hidden  py-2 leading-none uppercase`}>PlayList</h1>
+            <motion.div className={`w-full nav relative h-full cursor-pointer overflow-x-hidden overflow-y-scroll  p-5 sm:bg-transparent ${playingMusicInfo.bgColor}`}>
+                  <h1 className={`text-4xl mb-2 font-semibold tracking-tight ${playingMusicInfo.textColor} rounded-3xl sm:hidden  py-2 leading-none uppercase`}>PlayList</h1>
                   <motion.span
                         whileTap={{ scale: 0.7 }}
                         onClick={() => {
@@ -17,7 +17,7 @@ const MusicList = ({ nav, song, playingMusic, runMusic }) => {
                         <MdOutlineClose size={"2.5rem"} />
                   </motion.span>
                   <section className="w-full h-full">
-                        {song.map((eachMusic, index) => (
+                        {songs.map((eachMusic, index) => (
                               <span onClick={() => runMusic(index)} key={index}>
                                     <MusicItems musicDetail={eachMusic} />
                               </span>

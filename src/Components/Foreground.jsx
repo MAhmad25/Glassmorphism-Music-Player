@@ -7,34 +7,35 @@ import { PlayingMusic } from "../Contexts/PlayingMusic";
 import { Music } from "../Contexts/MusicState";
 
 const Foreground = () => {
-      const { song } = useContext(Music);
-      const { playingMusic, setPlayingMusic, currentMusicPlaying, setCurrentMusicPlaying, setisPlaying } = useContext(PlayingMusic);
+      const { songs } = useContext(Music);
+      const { playingMusicInfo, setPlayingMusicInfo, currentMusicPlaying, setCurrentMusicPlaying, setisPlaying } = useContext(PlayingMusic);
       const [currentMusic, setCurrentMusic] = useState(currentMusicPlaying);
       const runMusic = (selectedMusicIndex) => {
-            let selectedMusic = song.find((_, index) => index === selectedMusicIndex);
+            let selectedMusic = songs.find((_, index) => index === selectedMusicIndex);
             const initializeMusic = new Audio(selectedMusic.audioPath);
             initializeMusic.preload = "auto";
-            if (currentMusic) {
+            console.log(!currentMusic.paused);
+            if (!currentMusic.paused) {
                   currentMusic.pause();
                   currentMusic.currentTime = 0;
             }
             setisPlaying(true);
             setCurrentMusic(initializeMusic);
-            setPlayingMusic(selectedMusic);
+            setPlayingMusicInfo(selectedMusic);
             setCurrentMusicPlaying(initializeMusic);
             initializeMusic.play();
             initializeMusic.onended = () => {
                   selectedMusicIndex++;
-                  const nextIndex = selectedMusicIndex < song.length ? selectedMusicIndex : 0;
+                  const nextIndex = selectedMusicIndex < songs.length ? selectedMusicIndex : 0;
                   runMusic(nextIndex);
             };
       };
       return (
-            <section className={`w-full  h-[100dvh] ${playingMusic.bgColor}/30  absolute  text-white top-0 left-0 backdrop-blur-2xl `}>
-                  <Navbar song={song} playingMusic={playingMusic} runMusic={runMusic} />
+            <section className={`w-full  h-[100dvh] ${playingMusicInfo.bgColor}/30  absolute  text-white top-0 left-0 backdrop-blur-2xl `}>
+                  <Navbar songs={songs} playingMusicInfo={playingMusicInfo} runMusic={runMusic} />
                   <CardContainer />
                   <MusicInfo />
-                  <Controllers song={song} runMusic={runMusic} />
+                  <Controllers songs={songs} runMusic={runMusic} />
             </section>
       );
 };
