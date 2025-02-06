@@ -7,12 +7,13 @@ import { PlayingMusic } from "../Contexts/PlayingMusic";
 import { Music } from "../Contexts/MusicState";
 
 const Foreground = () => {
+      const { song } = useContext(Music);
       const { playingMusic, setPlayingMusic, currentMusicPlaying, setCurrentMusicPlaying, setisPlaying } = useContext(PlayingMusic);
       const [currentMusic, setCurrentMusic] = useState(currentMusicPlaying);
-      const { song } = useContext(Music);
       const runMusic = (selectedMusicIndex) => {
             let selectedMusic = song.find((_, index) => index === selectedMusicIndex);
             const initializeMusic = new Audio(selectedMusic.audioPath);
+            initializeMusic.preload = "auto";
             if (currentMusic) {
                   currentMusic.pause();
                   currentMusic.currentTime = 0;
