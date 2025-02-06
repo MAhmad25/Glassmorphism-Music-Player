@@ -4,6 +4,7 @@ import { FaPlay } from "react-icons/fa6";
 import { IoIosPause } from "react-icons/io";
 
 import { MdSkipNext, MdSkipPrevious } from "react-icons/md";
+//Global Variables
 const size = "3rem";
 let firstRun = false;
 
