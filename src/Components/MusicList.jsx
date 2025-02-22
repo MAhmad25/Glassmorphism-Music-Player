@@ -5,7 +5,7 @@ import { useState } from "react";
 import { MdOutlineClose } from "react-icons/md";
 
 const MusicList = ({ nav, songs, playingMusicInfo, runMusic }) => {
-      // const [position, setPosition] = useState(0);
+      const [position, setPosition] = useState(0);
       // window.addEventListener("resize", (e) => {
       //       console.log(position);
       //       if (e.target.screen.width - 6 >= 640) {
