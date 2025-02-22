@@ -1,5 +1,14 @@
 const songs = [
       {
+            title: "Machine",
+            artist: "Neoni",
+            image: "/images/machine.jpg",
+            bgColor: "bg-[#313A7D]",
+            textColor: "text-[#a4bcec]",
+            sliderColor: "bg-[#a4bcec]",
+            audioPath: "/audio/machine.mp3",
+      },
+      {
             title: "Rise Up",
             artist: "TheFatRat",
             image: "/images/rise_up.jpg",
@@ -54,13 +63,13 @@ const songs = [
             audioPath: "/audio/army.mp3",
       },
       {
-            title: "Machine",
-            artist: "Neoni",
-            image: "/images/machine.jpg",
-            bgColor: "bg-[#313A7D]",
-            textColor: "text-[#a4bcec]",
-            sliderColor: "bg-[#a4bcec]",
-            audioPath: "/audio/machine.mp3",
+            title: "Peaky Blinder",
+            artist: "Otnicka",
+            image: "/images/peaky.png",
+            bgColor: "bg-[#494949]",
+            textColor: "text-[#b0b0b0]",
+            sliderColor: "bg-[#b0b0b0]",
+            audioPath: "/audio/peaky.mp3",
       },
       {
             title: "Supplication",
@@ -88,15 +97,6 @@ const songs = [
             textColor: "text-[#87cad9]",
             sliderColor: "bg-[#87cad9]",
             audioPath: "/audio/RasoolAmeen.mp3",
-      },
-      {
-            title: "Peaky Blinder",
-            artist: "Otnicka",
-            image: "/images/peaky.png",
-            bgColor: "bg-[#494949]",
-            textColor: "text-[#b0b0b0]",
-            sliderColor: "bg-[#b0b0b0]",
-            audioPath: "/audio/peaky.mp3",
       },
 ];
 

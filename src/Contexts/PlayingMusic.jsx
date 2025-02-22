@@ -5,13 +5,13 @@ const MusicPlaying = (prop) => {
       const [currentMusicPlaying, setCurrentMusicPlaying] = useState(new Audio("/audio/riseup.mp3"));
       const [isPlaying, setisPlaying] = useState(false);
       const [playingMusicInfo, setPlayingMusicInfo] = useState({
-            title: "Rise Up",
-            artist: "TheFatRat",
-            image: "/images/rise_up.jpg",
-            bgColor: "bg-[#D48947]",
-            textColor: "text-[#dda56c]",
-            sliderColor: "bg-[#e9c79e]",
-            audioPath: "/audio/riseup.mp3",
+            title: "Machine",
+            artist: "Neoni",
+            image: "/images/machine.jpg",
+            bgColor: "bg-[#313A7D]",
+            textColor: "text-[#a4bcec]",
+            sliderColor: "bg-[#a4bcec]",
+            audioPath: "/audio/machine.mp3",
       });
       return <PlayingMusic.Provider value={{ playingMusicInfo, setPlayingMusicInfo, currentMusicPlaying, setCurrentMusicPlaying, isPlaying, setisPlaying }}>{prop.children}</PlayingMusic.Provider>;
 };

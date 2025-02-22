@@ -11,7 +11,6 @@ const MusicContext = (prop) => {
             localStorage.setItem("musics", JSON.stringify(MusicData));
             fetchData();
       }, []);
-      // console.log(music);
       return <Music.Provider value={{ songs }}>{prop.children}</Music.Provider>;
 };
 export default MusicContext;
