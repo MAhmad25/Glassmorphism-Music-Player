@@ -15,7 +15,7 @@ const MusicList = ({ nav, songs, playingMusicInfo, runMusic }) => {
       //       }
       // });
       return (
-            <motion.div className={`w-full nav sm:right-[${position}%] relative h-full cursor-pointer overflow-x-hidden overflow-y-scroll  p-5 sm:bg-transparent ${playingMusicInfo.bgColor}`}>
+            <motion.div className={`w-full nav sm:right-[15%] relative h-full cursor-pointer overflow-x-hidden overflow-y-scroll  p-5 sm:bg-transparent ${playingMusicInfo.bgColor}`}>
                   <h1 className={`text-4xl mb-2 font-semibold tracking-tight ${playingMusicInfo.textColor} rounded-3xl sm:hidden  py-2 leading-none uppercase`}>PlayList</h1>
                   <motion.span
                         whileTap={{ scale: 0.7 }}
