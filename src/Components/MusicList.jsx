@@ -7,7 +7,7 @@ import { MdOutlineClose } from "react-icons/md";
 const MusicList = ({ nav, songs, playingMusicInfo, runMusic }) => {
       useEffect(() => {
             const handleResize = () => {
-                  if (window.innerWidth >= 640) nav.current.style.right = "0%";
+                  if (window.innerWidth >= 640) nav.current.style.right = "3%";
             };
             window.addEventListener("resize", handleResize);
             return () => removeEventListener("resize", handleResize);
