@@ -10,7 +10,7 @@ const MusicInfo = () => {
                   <motion.h3 initial={{ y: "200%" }} animate={{ y: 0, transition: { delay: 0.2, ease: "backInOut", duration: 0.4 } }} className="text-lg font-medium">
                         {playingMusicInfo.title}
                   </motion.h3>
-                  <motion.h1 initial={{ y: "200%" }} animate={{ y: 0, transition: { delay: 0.2, ease: "backInOut", duration: 0.4 } }} className={`text-lg flex justify-center tracking-tighter gap-1 items-center font-medium leading-none ${playingMusicInfo.textColor} `}>
+                  <motion.h1 initial={{ y: "200%" }} animate={{ y: 0, transition: { delay: 0.2, ease: "backInOut", duration: 0.4 } }} className={`text-[17px] sm:text-lg flex justify-center tracking-tighter gap-1 items-center font-medium whitespace-nowrap leading-none ${playingMusicInfo.textColor} `}>
                         {playingMusicInfo.title}
                         <span className=" inline-block">
                               <MdOutlineHorizontalRule />

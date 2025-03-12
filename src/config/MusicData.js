@@ -9,7 +9,7 @@ const songs = [
             audioPath: "/audio/supplication.mp3",
       },
       {
-            title: "Ay Khatm e Rusul Maaki Madani",
+            title: "Ay Khatm e Rusul Makki Madni",
             artist: "Sibtain Haider",
             image: "/images/AeKhatam-e-Rasool.jpg",
             bgColor: "bg-[#485950]",
