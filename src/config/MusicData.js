@@ -45,6 +45,15 @@ const songs = [
             audioPath: "/audio/tabitab.mp4",
       },
       {
+            title: "Ya Nabi Salam Alayka",
+            artist: "Maher Zain",
+            image: "/images/NabiAssalamAlyeka.jpg",
+            bgColor: "bg-[#66829c]",
+            textColor: "text-[#c0dae1]",
+            sliderColor: "bg-[#c0dae1]",
+            audioPath: "/audio/YaNabiSalamAlayka.mp3",
+      },
+      {
             title: "Rage",
             artist: "Pauus",
             image: "/images/rage.png",
