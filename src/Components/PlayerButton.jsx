@@ -5,9 +5,8 @@ import { IoIosPause } from "react-icons/io";
 import { MdSkipNext, MdSkipPrevious } from "react-icons/md";
 //Global Variables
 const size = "3rem";
-let firstRun = false;
 
-const PlayerButton = ({ playingMusicInfo, currentMusicPlaying, isPlaying, setisPlaying, songs, runMusic }) => {
+const PlayerButton = ({ playingMusicInfo, firstRun, setFirstRun, currentMusicPlaying, isPlaying, setisPlaying, songs, runMusic }) => {
       const codewithBracket = playingMusicInfo.textColor.split("[").at(-1);
       const color = codewithBracket.slice(0, codewithBracket.length - 1);
       const Findindex = songs.findIndex((eachMusic) => eachMusic.title === playingMusicInfo.title);
@@ -44,7 +43,7 @@ const PlayerButton = ({ playingMusicInfo, currentMusicPlaying, isPlaying, setisP
                                     if (firstRun) {
                                           currentMusicPlaying.play();
                                     } else {
-                                          firstRun = true;
+                                          setFirstRun(false);
                                           runMusic(Findindex);
                                     }
                                     setisPlaying(true);

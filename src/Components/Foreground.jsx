@@ -5,12 +5,13 @@ import MusicInfo from "./MusicInfo";
 import Navbar from "./Navbar";
 import { PlayingMusic } from "../Contexts/PlayingMusic";
 const Foreground = () => {
-      const { playingMusicInfo, setPlayingMusicInfo, currentMusicPlaying, setCurrentMusicPlaying, songs, setisPlaying } = useContext(PlayingMusic);
+      const { playingMusicInfo, setFirstRun, setPlayingMusicInfo, currentMusicPlaying, setCurrentMusicPlaying, songs, setisPlaying } = useContext(PlayingMusic);
       const [currentMusic, setCurrentMusic] = useState(currentMusicPlaying);
       //!   Important
       //?  runMusic() is the Most Important Function of this Application This Handle Everything
       //?  This is where whole App's state Changes
       const runMusic = (selectedMusicIndex) => {
+            setFirstRun(true);
             let selectedMusic = songs.find((_, index) => index === selectedMusicIndex);
             const initializeMusic = new Audio(selectedMusic.audioPath);
             initializeMusic.preload = "auto";
@@ -34,7 +35,7 @@ const Foreground = () => {
                   <Navbar songs={songs} playingMusicInfo={playingMusicInfo} runMusic={runMusic} />
                   <CardContainer />
                   <MusicInfo />
-                  <Controllers songs={songs} runMusic={runMusic} />
+                  <Controllers runMusic={runMusic} />
             </section>
       );
 };
