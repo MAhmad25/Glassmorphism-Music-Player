@@ -41,10 +41,12 @@ const PlayerButton = ({ playingMusicInfo, currentMusicPlaying, isPlaying, setisP
                               initial={{ y: "200%" }}
                               animate={{ y: 0, transition: { delay: 0.2, ease: "backInOut", duration: 0.4 } }}
                               onClick={() => {
-                                    if (!firstRun) {
+                                    if (firstRun) {
+                                          currentMusicPlaying.play();
+                                    } else {
                                           firstRun = true;
                                           runMusic(Findindex);
-                                    } else currentMusicPlaying.play();
+                                    }
                                     setisPlaying(true);
                               }}
                         >

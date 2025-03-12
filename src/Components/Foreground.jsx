@@ -4,11 +4,8 @@ import Controllers from "./Controllers";
 import MusicInfo from "./MusicInfo";
 import Navbar from "./Navbar";
 import { PlayingMusic } from "../Contexts/PlayingMusic";
-import { Music } from "../Contexts/MusicState";
-
 const Foreground = () => {
-      const { songs } = useContext(Music);
-      const { playingMusicInfo, setPlayingMusicInfo, currentMusicPlaying, setCurrentMusicPlaying, setisPlaying } = useContext(PlayingMusic);
+      const { playingMusicInfo, setPlayingMusicInfo, currentMusicPlaying, setCurrentMusicPlaying, songs, setisPlaying } = useContext(PlayingMusic);
       const [currentMusic, setCurrentMusic] = useState(currentMusicPlaying);
       //!   Important
       //?  runMusic() is the Most Important Function of this Application This Handle Everything
