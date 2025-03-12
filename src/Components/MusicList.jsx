@@ -24,7 +24,7 @@ const MusicList = ({ nav, songs, playingMusicInfo, runMusic }) => {
                   >
                         <MdOutlineClose size={"2.5rem"} />
                   </motion.span>
-                  <section className="w-full pb-5 h-full">
+                  <section className="w-full pb-20 h-full">
                         {songs.map((eachMusic, index) => (
                               <span onClick={() => runMusic(index)} key={index}>
                                     <MusicItems musicDetail={eachMusic} />

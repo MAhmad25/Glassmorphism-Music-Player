@@ -9,7 +9,7 @@ const Navbar = ({ runMusic, songs, playingMusicInfo }) => {
             <>
                   <section className="w-full flex justify-end items-center p-5 ">
                         <h1 className="text-xl text-white whitespace-nowrap tracking-tighter leading-none w-[95%] text-center  font-medium">
-                              Based on <span className={`${playingMusicInfo.textColor} font-bold`}>{playingMusicInfo.artist}</span>
+                              Crafted by <span className={`${playingMusicInfo.textColor} font-bold`}>Ahmad</span>
                         </h1>
                         <motion.span
                               whileTap={{ scale: 0.7 }}
