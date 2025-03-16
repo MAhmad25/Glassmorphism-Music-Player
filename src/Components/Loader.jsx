@@ -21,6 +21,7 @@ const Loader = () => {
 const StyledWrapper = styled.div`
       .loader {
             display: flex;
+            max-height: 20px;
       }
 
       .l,

@@ -4,7 +4,6 @@ import Controllers from "./Controllers";
 import MusicInfo from "./MusicInfo";
 import Navbar from "./Navbar";
 import { PlayingMusic } from "../Contexts/PlayingMusic";
-import Loader from "./Loader";
 const Foreground = () => {
       const { playingMusicInfo, setFirstRun, setPlayingMusicInfo, currentMusicPlaying, setCurrentMusicPlaying, songs, setisPlaying } = useContext(PlayingMusic);
       const [currentMusic, setCurrentMusic] = useState(currentMusicPlaying);
@@ -35,11 +34,6 @@ const Foreground = () => {
             <section className={`w-full  h-[100dvh] ${playingMusicInfo.bgColor}/30  absolute  text-white top-0 left-0 backdrop-blur-2xl `}>
                   <Navbar songs={songs} playingMusicInfo={playingMusicInfo} currentMusicPlaying={currentMusicPlaying} runMusic={runMusic} />
                   <CardContainer />
-                  {!currentMusicPlaying.paused && (
-                        <div className="absolute top-[2%] left-1/2 -translate-x-1/2">
-                              <Loader />
-                        </div>
-                  )}
                   <MusicInfo />
                   <Controllers runMusic={runMusic} />
             </section>
