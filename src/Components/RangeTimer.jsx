@@ -26,15 +26,21 @@ const RangeTimer = ({ playingMusicInfo, currentMusicPlaying }) => {
                               }}
                               max={duration}
                               value={currentTime}
-                              className={`w-full appearance-none  h-2  rounded-full ${playingMusicInfo.sliderColor} `}
+                              className={`w-full appearance-none h-2 rounded-full ${playingMusicInfo.sliderColor} `}
                               type="range"
                         />
                         <div className="w-full mt-2 flex justify-between gap-10 items-center">
                               <p className="font-medium">
-                                    {Math.floor(currentTime / 60)}:{(currentTime % 60).toFixed(0).padStart(2, "0")}
+                                    {Math.floor(currentTime / 60)}:
+                                    {Math.floor(currentTime % 60)
+                                          .toString()
+                                          .padStart(2, "0")}
                               </p>
                               <p className="font-medium">
-                                    {totalMinutes}:{(duration % 60).toFixed(0).padStart(2, 0)}
+                                    {totalMinutes}:
+                                    {Math.floor(duration % 60)
+                                          .toString()
+                                          .padStart(2, 0)}
                               </p>
                         </div>
                   </motion.div>

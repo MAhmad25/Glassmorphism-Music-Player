@@ -3,14 +3,16 @@ import { SlPlaylist } from "react-icons/sl";
 import MusicList from "./MusicList";
 import { useRef } from "react";
 import { motion } from "motion/react";
-const Navbar = ({ runMusic, songs, playingMusicInfo }) => {
+const Navbar = ({ runMusic, songs, currentMusicPlaying, playingMusicInfo }) => {
       const navBar = useRef(null);
       return (
             <>
                   <section className="w-full flex justify-end items-center p-5 ">
-                        <h1 className="text-xl text-white whitespace-nowrap tracking-tighter leading-none w-[95%] text-center  font-medium">
-                              Crafted by <span className={`${playingMusicInfo.textColor} font-bold`}>Ahmad</span>
-                        </h1>
+                        {currentMusicPlaying.paused && (
+                              <h1 className="text-xl text-white whitespace-nowrap absolute tracking-tighter leading-none w-[95%] text-center  font-medium">
+                                    Crafted by <span className={`${playingMusicInfo.textColor} font-bold`}>Ahmad</span>
+                              </h1>
+                        )}
                         <motion.span
                               whileTap={{ scale: 0.7 }}
                               className="sm:hidden"
