@@ -13,19 +13,19 @@ MusicApp is a simple application designed to manage and play your music collecti
 To install and run MusicApp, follow these steps:
 
 1. Clone the repository:
-   `sh
+   `
 git clone https://github.com/yourusername/MusicApp.git
 `
 2. Navigate to the project directory:
-   `sh
+   `
 cd MusicApp
 `
 3. Install the necessary dependencies:
-   `sh
+   `
 npm install
 `
 4. Start the application:
-   `sh
+   `
 npm run dev
 `
 
