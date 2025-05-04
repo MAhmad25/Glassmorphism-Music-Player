@@ -11,7 +11,7 @@ const PlayerButton = ({ playingMusicInfo, firstRun, setFirstRun, currentMusicPla
       const color = codewithBracket.slice(0, codewithBracket.length - 1);
       const Findindex = songs.findIndex((eachMusic) => eachMusic.title === playingMusicInfo.title);
       return (
-            <div className="w-full md:px-10 lg:px-40 xl:px-52 flex items-center justify-around mt-1">
+            <div className="w-full md:px-10 lg:px-40 xl:px-64  flex items-center justify-around mt-1">
                   <motion.span
                         initial={{ y: "200%" }}
                         animate={{ y: 0, transition: { delay: 0.2, ease: "backInOut", duration: 0.4 } }}
