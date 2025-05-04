@@ -19,6 +19,7 @@ const PlayerButton = ({ playingMusicInfo, firstRun, setFirstRun, currentMusicPla
                         onClick={() => {
                               Findindex > 0 ? runMusic(Findindex - 1) : runMusic(songs.length - 1);
                         }}
+                        className="p-2 bg-black/10 backdrop-blur-md rounded-full"
                   >
                         <MdSkipPrevious color={color} size={size} />
                   </motion.span>
@@ -31,6 +32,7 @@ const PlayerButton = ({ playingMusicInfo, firstRun, setFirstRun, currentMusicPla
                                     currentMusicPlaying.pause();
                                     setisPlaying(false);
                               }}
+                              className="p-2 bg-black/10 backdrop-blur-md rounded-full"
                         >
                               <IoIosPause color={color} size={size} />
                         </motion.span>
@@ -48,11 +50,12 @@ const PlayerButton = ({ playingMusicInfo, firstRun, setFirstRun, currentMusicPla
                                     }
                                     setisPlaying(true);
                               }}
+                              className=" p-3 bg-black/10 backdrop-blur-md rounded-full"
                         >
-                              <FaPlay color={color} size={"2.5rem"} />
+                              <FaPlay color={color} size={"2.4rem"} />
                         </motion.span>
                   )}
-                  <motion.span initial={{ y: "200%" }} animate={{ y: 0, transition: { delay: 0.2, ease: "backInOut", duration: 0.4 } }} whileTap={{ scale: 0.755588 }} onClick={() => (Findindex < songs.length - 1 ? runMusic(Findindex + 1) : runMusic(0))}>
+                  <motion.span initial={{ y: "200%" }} animate={{ y: 0, transition: { delay: 0.2, ease: "backInOut", duration: 0.4 } }} whileTap={{ scale: 0.755588 }} className=" p-2  bg-black/10 backdrop-blur-md rounded-full" onClick={() => (Findindex < songs.length - 1 ? runMusic(Findindex + 1) : runMusic(0))}>
                         <MdSkipNext color={color} size={size} />
                   </motion.span>
             </div>
