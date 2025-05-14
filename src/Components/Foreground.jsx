@@ -7,9 +7,6 @@ import { PlayingMusic } from "../Contexts/PlayingMusic";
 const Foreground = () => {
       const { playingMusicInfo, setFirstRun, setPlayingMusicInfo, currentMusicPlaying, setCurrentMusicPlaying, songs, setisPlaying } = useContext(PlayingMusic);
       const [currentMusic, setCurrentMusic] = useState(currentMusicPlaying);
-      //!   Important
-      //?  runMusic() is the Most Important Function of this Application This Handle Everything
-      //?  This is where whole App's state Changes
       const runMusic = (selectedMusicIndex) => {
             setFirstRun(true);
             let selectedMusic = songs.find((_, index) => index === selectedMusicIndex);
