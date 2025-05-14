@@ -14,7 +14,7 @@ const Navbar = ({ runMusic, songs, currentMusicPlaying, playingMusicInfo }) => {
                                     <Loader />
                               ) : (
                                     <>
-                                          <span> Music </span> <span className={`${playingMusicInfo.textColor} ml-2 font-bold`}>Player</span>
+                                          <span> Music </span> <span className={`${playingMusicInfo.textColor}  ml-2 font-bold`}>Player</span>
                                     </>
                               )}
                         </h1>
