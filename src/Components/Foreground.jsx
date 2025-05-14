@@ -28,7 +28,7 @@ const Foreground = () => {
             };
       };
       return (
-            <section className={`w-full  h-[100dvh] ${playingMusicInfo.bgColor}/30  absolute  text-white top-0 left-0 backdrop-blur-2xl `}>
+            <section className={`w-full  h-[100dvh] ${playingMusicInfo.bgColor}/30  absolute  text-white top-0 left-0  backdrop-blur-2xl `}>
                   <Navbar songs={songs} playingMusicInfo={playingMusicInfo} currentMusicPlaying={currentMusicPlaying} runMusic={runMusic} />
                   <CardContainer />
                   <MusicInfo />
