@@ -5,6 +5,8 @@ import { PlayingMusic } from "../Contexts/PlayingMusic";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { CSSPlugin } from "gsap/CSSPlugin";
+import { SplitText } from "gsap/SplitText";
+gsap.registerPlugin(SplitText);
 gsap.registerPlugin(CSSPlugin);
 
 const MusicInfo = () => {
@@ -16,17 +18,26 @@ const MusicInfo = () => {
       const animateText = contextSafe(() => {
             if (animationInProgress) return;
             animationInProgress = true;
-            gsap.killTweensOf([title.current, artist.current]);
-            gsap.set([title.current, artist.current], { yPercent: -100 });
-            gsap.to([title.current, artist.current], {
+            const splitTitle = new SplitText(title.current);
+            let tl = gsap.timeline({ defaults: { duration: 0.3, ease: "power4.out" } });
+            gsap.killTweensOf(splitTitle.chars);
+            gsap.killTweensOf(artist.current);
+            gsap.set([splitTitle.chars, artist.current], { yPercent: 100 });
+            tl.to(splitTitle.chars, {
                   yPercent: 0,
-                  stagger: 0.1,
-                  duration: 0.5,
-                  ease: "power4.out",
-                  onComplete: () => {
-                        animationInProgress = false;
+                  skewX: 5,
+                  stagger: 0.067,
+            }).to(
+                  artist.current,
+                  {
+                        yPercent: 0,
+                        duration: 0.6,
+                        onComplete: () => {
+                              animationInProgress = false;
+                        },
                   },
-            });
+                  "-=0.5"
+            );
       });
       useEffect(() => {
             if (playingMusicInfo.title && playingMusicInfo.artist) {
