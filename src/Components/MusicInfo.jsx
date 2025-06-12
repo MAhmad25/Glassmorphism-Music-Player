@@ -26,7 +26,11 @@ const MusicInfo = () => {
             tl.to(splitTitle.chars, {
                   yPercent: 0,
                   skewX: 5,
-                  stagger: 0.067,
+                  stagger: {
+                        from: "center",
+                        axis: "x",
+                        amount: 0.4,
+                  },
             }).to(
                   artist.current,
                   {
