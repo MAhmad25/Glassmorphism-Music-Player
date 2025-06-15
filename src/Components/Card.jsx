@@ -1,5 +1,5 @@
 import { useContext, useRef } from "react";
-import { PlayingMusic } from "../Contexts/PlayingMusic";
+import { PlayingMusic } from "../Contexts/Context";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
@@ -7,9 +7,7 @@ const Card = () => {
       const { playingMusicInfo } = useContext(PlayingMusic);
       const image = useRef(null);
       const animationRef = useRef({ inProgress: false });
-
       const { contextSafe } = useGSAP();
-
       const animateImage = contextSafe(() => {
             if (animationRef.current.inProgress) return;
             animationRef.current.inProgress = true;

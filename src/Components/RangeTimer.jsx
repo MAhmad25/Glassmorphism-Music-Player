@@ -28,7 +28,6 @@ const RangeTimer = ({ playingMusicInfo, currentMusicPlaying }) => {
                               className={`w-full appearance-none h-2 rounded-full ${playingMusicInfo.sliderColor} `}
                               type="range"
                         />
-
                         <div className="w-full mt-2 flex justify-between gap-10 items-center">
                               <p className="font-medium">
                                     {Math.floor(currentTime / 60)}:

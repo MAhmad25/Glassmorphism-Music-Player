@@ -1,12 +1,15 @@
 /* eslint-disable react/prop-types */
 import { motion } from "motion/react";
+import { useContext } from "react";
 import { FaPlay } from "react-icons/fa6";
 import { IoIosPause } from "react-icons/io";
 import { MdSkipNext, MdSkipPrevious } from "react-icons/md";
+import { PlayingMusic } from "../Contexts/Context";
 //Global Variables
 const size = "3rem";
 
-const PlayerButton = ({ playingMusicInfo, firstRun, setFirstRun, currentMusicPlaying, isPlaying, setisPlaying, songs, runMusic }) => {
+const PlayerButton = ({ runMusic }) => {
+      const { playingMusicInfo, firstRun, setFirstRun, currentMusicPlaying, isPlaying, setisPlaying, songs } = useContext(PlayingMusic);
       const codewithBracket = playingMusicInfo.textColor.split("[").at(-1);
       const color = codewithBracket.slice(0, codewithBracket.length - 1);
       const Findindex = songs.findIndex((eachMusic) => eachMusic.title === playingMusicInfo.title);

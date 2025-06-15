@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { memo } from "react";
 const Loader = () => {
       return (
             <StyledWrapper>
@@ -73,4 +73,4 @@ const StyledWrapper = styled.div`
       }
 `;
 
-export default Loader;
+export default memo(Loader);

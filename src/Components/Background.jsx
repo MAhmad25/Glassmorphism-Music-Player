@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import Foreground from "./Foreground";
-import { PlayingMusic } from "../Contexts/PlayingMusic";
+import { PlayingMusic } from "../Contexts/Context";
 const Background = () => {
       const { playingMusicInfo } = useContext(PlayingMusic);
       return (

@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useContext, useRef, useEffect } from "react";
 import { MdOutlineHorizontalRule } from "react-icons/md";
-import { PlayingMusic } from "../Contexts/PlayingMusic";
+import { PlayingMusic } from "../Contexts/Context";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { CSSPlugin } from "gsap/CSSPlugin";
