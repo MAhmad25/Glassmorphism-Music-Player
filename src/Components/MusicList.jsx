@@ -13,7 +13,7 @@ const MusicList = ({ nav, songs, playingMusicInfo, runMusic }) => {
             return () => removeEventListener("resize", handleResize);
       }, [nav]);
       return (
-            <motion.div className={`w-full  [&::-webkit-scrollbar]:hidden sm:right-[0%] relative h-dvh cursor-pointer overflow-x-hidden overflow-y-scroll  p-5 sm:bg-transparent ${playingMusicInfo.bgColor}`}>
+            <motion.div className={`w-full [&::-webkit-scrollbar]:hidden sm:right-[0%] relative h-dvh sm:h-full cursor-pointer sm:bg-transparent p-5   ${playingMusicInfo.bgColor}`}>
                   <h1 className={`text-4xl mb-2 font-semibold tracking-tight ${playingMusicInfo.textColor} rounded-3xl sm:hidden  py-2 leading-none uppercase`}>PlayList</h1>
                   <motion.span
                         whileTap={{ scale: 0.7 }}
@@ -24,7 +24,7 @@ const MusicList = ({ nav, songs, playingMusicInfo, runMusic }) => {
                   >
                         <MdOutlineClose size={"2.5rem"} />
                   </motion.span>
-                  <section className="w-full [&::-webkit-scrollbar]:hidden overflow-hidden overflow-y-scroll sm:h-1/2 h-[90%]">
+                  <section className="w-full [&::-webkit-scrollbar]:hidden overflow-hidden overflow-y-scroll  sm:h-full h-[90%]">
                         {songs.map((eachMusic, index) => (
                               <span onClick={() => runMusic(index)} key={index}>
                                     <MusicItems musicDetail={eachMusic} />
