@@ -1,18 +1,1 @@
 @import "tailwindcss";
-input[type="range"]::-webkit-slider-thumb {
-      appearance: none;
-      @apply w-5 h-5  rounded-full cursor-pointer;
-      background: rgb(255, 255, 255);
-      box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.2), 0 0 0 15px rgba(255, 255, 255, 0.067);
-}
-
-input[type="range"]::-moz-range-thumb {
-      @apply w-5 h-5 bg-red-500 rounded-full cursor-pointer;
-}
-
-input[type="range"]::-ms-thumb {
-      @apply w-5 h-5 bg-red-500 rounded-full cursor-pointer;
-}
-.nav::-webkit-scrollbar {
-      display: none;
-}

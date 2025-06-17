@@ -21,6 +21,7 @@ const RangeTimer = () => {
                         <label htmlFor="slider"></label>
                         <motion.input
                               whileTap={{ scale: 1.05445 }}
+                              whileHover={{ scaleY: 1.1 }}
                               onChange={(e) => {
                                     currentMusicPlaying.currentTime = e.target.value;
                                     setCurrentTime(e.target.value);
@@ -28,7 +29,17 @@ const RangeTimer = () => {
                               max={duration}
                               value={currentTime}
                               name="slider"
-                              className={`w-full appearance-none h-2 rounded-full ${playingMusicInfo.sliderColor} `}
+                              className={`w-full appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-5
+                                                      [&::-webkit-slider-thumb]:h-5
+                                                      [&::-webkit-slider-thumb]:rounded-full
+                                                 [&::-webkit-slider-thumb]:bg-white 
+                                                 [&::-webkit-slider-thumb]:shadow-[0_0_0_8px_rgba(255,255,255,0.2),0_0_0_15px_rgba(255,255,255,0.067)]  h-2 rounded-full 
+                                                  [&::-moz-range-thumb]:appearance-none
+                                                [&::-moz-range-thumb]:w-5
+                                                [&::-moz-range-thumb]:h-5
+                                                [&::-moz-range-thumb]:rounded-full
+                                                 [&::-moz-range-thumb]:bg-white
+                                                [&::-moz-range-thumb]:shadow-[0_0_0_8px_rgba(255,255,255,0.2),0_0_0_15px_rgba(255,255,255,0.067)] ${playingMusicInfo.sliderColor} `}
                               type="range"
                         />
                         <div className="w-full mt-2 flex justify-between gap-10 items-center">
