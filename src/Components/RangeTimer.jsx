@@ -1,9 +1,11 @@
-/* eslint-disable react/prop-types */
 import { motion } from "motion/react";
-import { useEffect, useState } from "react";
-const RangeTimer = ({ playingMusicInfo, currentMusicPlaying }) => {
+import { useContext, useEffect, useState } from "react";
+import { PlayingMusic } from "../Contexts/Context";
+const RangeTimer = () => {
       const [currentTime, setCurrentTime] = useState(0);
       const [duration, setDuration] = useState(0);
+      const { playingMusicInfo, currentMusicPlaying } = useContext(PlayingMusic);
+      const totalMinutes = Math.floor(duration / 60).toFixed(0);
       useEffect(() => {
             if (currentMusicPlaying) {
                   const updateTime = () => setCurrentTime(currentMusicPlaying.currentTime);
@@ -13,10 +15,10 @@ const RangeTimer = ({ playingMusicInfo, currentMusicPlaying }) => {
                   });
             }
       }, [currentMusicPlaying]);
-      const totalMinutes = Math.floor(duration / 60).toFixed(0);
       return (
             <>
                   <motion.div initial={{ scale: 0 }} animate={{ scale: 1, transition: { delay: 0.2, ease: "backInOut", duration: 0.4 } }} className="flex md:w-full md:px-10 lg:px-40 xl:px-52  flex-col justify-center items-center">
+                        <label htmlFor="slider"></label>
                         <motion.input
                               whileTap={{ scale: 1.05445 }}
                               onChange={(e) => {
@@ -25,6 +27,7 @@ const RangeTimer = ({ playingMusicInfo, currentMusicPlaying }) => {
                               }}
                               max={duration}
                               value={currentTime}
+                              name="slider"
                               className={`w-full appearance-none h-2 rounded-full ${playingMusicInfo.sliderColor} `}
                               type="range"
                         />

@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { SlPlaylist } from "react-icons/sl";
 import MusicList from "./MusicList";
 import { useContext, useRef } from "react";
@@ -6,9 +5,9 @@ import { motion } from "motion/react";
 import { memo } from "react";
 import Loader from "./Loader";
 import { PlayingMusic } from "../Contexts/Context";
-const Navbar = ({ runMusic }) => {
+const Navbar = () => {
       const navBar = useRef(null);
-      const { songs, currentMusicPlaying, playingMusicInfo } = useContext(PlayingMusic);
+      const { songs, currentMusicPlaying, runMusic, playingMusicInfo } = useContext(PlayingMusic);
       return (
             <>
                   <section className="w-full flex justify-end items-center p-5 ">

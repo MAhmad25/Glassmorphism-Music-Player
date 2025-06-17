@@ -1,5 +1,6 @@
 const songs = [
       {
+            id: 0,
             title: "Supplication",
             artist: "Sami Yusuf",
             image: "/images/supplication.jpg",
@@ -9,6 +10,7 @@ const songs = [
             audioPath: "/audio/supplication.mp3",
       },
       {
+            id: 1,
             title: "Ay Khatm e Rusul Makki Madni",
             artist: "Sibtain Haider",
             image: "/images/AeKhatam-e-Rasool.jpg",
@@ -18,6 +20,7 @@ const songs = [
             audioPath: "/audio/Khatam-e-Rasool.mp3",
       },
       {
+            id: 2,
             title: "Tala'al Badru",
             artist: "Ayesha Abdul Basit",
             image: "/images/talaalbadru.jpg",
@@ -28,6 +31,7 @@ const songs = [
       },
 
       {
+            id: 3,
             title: "Ya Nabi Salam Alayka",
             artist: "Maher Zain",
             image: "/images/NabiAssalamAlyeka.jpg",
@@ -38,6 +42,7 @@ const songs = [
       },
 
       {
+            id: 4,
             title: "Rasool-e-Ameen",
             artist: "Junaid Jamshed",
             image: "/images/Rasool-e-Ameen.jpg",
@@ -47,6 +52,7 @@ const songs = [
             audioPath: "/audio/RasoolAmeen.mp3",
       },
       {
+            id: 5,
             title: "Delta",
             artist: "JURGAZ",
             image: "/images/delta.jpg",
@@ -56,6 +62,7 @@ const songs = [
             audioPath: "/audio/delta.mp3",
       },
       {
+            id: 6,
             title: "Knockout",
             artist: "Adam Griffth",
             image: "/images/knockout.jpg",
@@ -65,6 +72,7 @@ const songs = [
             audioPath: "/audio/knockout.mp3",
       },
       {
+            id: 7,
             title: "Perses",
             artist: "BEATSMASH, Trias",
             image: "/images/perses.png",
@@ -74,6 +82,7 @@ const songs = [
             audioPath: "/audio/perses.mp3",
       },
       {
+            id: 8,
             title: "Bre Petrunko",
             artist: "FRHAD",
             image: "/images/petrunko.jpg",
@@ -83,6 +92,7 @@ const songs = [
             audioPath: "/audio/brepetrunko.mp3",
       },
       {
+            id: 9,
             title: "Rage",
             artist: "Pauus",
             image: "/images/rage.png",
@@ -92,6 +102,7 @@ const songs = [
             audioPath: "/audio/rage.mp3",
       },
       {
+            id: 10,
             title: "Machine",
             artist: "Neoni",
             image: "/images/machine.jpg",
@@ -101,6 +112,7 @@ const songs = [
             audioPath: "/audio/machine.mp3",
       },
       {
+            id: 11,
             title: "Rise Up",
             artist: "TheFatRat",
             image: "/images/rise_up.jpg",
@@ -110,6 +122,7 @@ const songs = [
             audioPath: "/audio/riseup.mp3",
       },
       {
+            id: 12,
             title: "Believer",
             artist: "Imagine Dragons",
             image: "/images/believer.jpg",
@@ -119,6 +132,7 @@ const songs = [
             audioPath: "/audio/believer.mp3",
       },
       {
+            id: 13,
             title: "Sucker Punch",
             artist: "Neoni",
             image: "/images/s_punch.jpg",
@@ -128,6 +142,7 @@ const songs = [
             audioPath: "/audio/spunch.mp3",
       },
       {
+            id: 14,
             title: "Wonderland",
             artist: "Neoni",
             image: "/images/wonderland.jpg",
@@ -137,6 +152,7 @@ const songs = [
             audioPath: "/audio/wonderland.mp3",
       },
       {
+            id: 15,
             title: "Army",
             artist: "Neoni",
             image: "/images/army.jpg",
@@ -146,6 +162,7 @@ const songs = [
             audioPath: "/audio/army.mp3",
       },
       {
+            id: 16,
             title: "Peaky Blinder",
             artist: "Otnicka",
             image: "/images/peaky.png",
