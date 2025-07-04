@@ -8,7 +8,6 @@ import { CSSPlugin } from "gsap/CSSPlugin";
 import { SplitText } from "gsap/SplitText";
 gsap.registerPlugin(SplitText);
 gsap.registerPlugin(CSSPlugin);
-
 const MusicInfo = () => {
       const { contextSafe } = useGSAP();
       const { playingMusicInfo } = useContext(PlayingMusic);
@@ -44,9 +43,7 @@ const MusicInfo = () => {
             );
       });
       useEffect(() => {
-            if (playingMusicInfo.title && playingMusicInfo.artist) {
-                  animateText();
-            }
+            if (playingMusicInfo.title && playingMusicInfo.artist) animateText();
       }, [playingMusicInfo]);
       return (
             <div className="px-10 z-50   flex flex-col   overflow-hidden items-center h-fit sm:mt-5  py-1 place-content-center ">

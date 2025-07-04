@@ -1,9 +1,8 @@
 /* eslint-disable react/prop-types */
 import MusicItems from "./MusicItems";
 import { motion } from "motion/react";
-import { useEffect } from "react";
+import { memo, useEffect } from "react";
 import { MdOutlineClose } from "react-icons/md";
-
 const MusicList = ({ nav, songs, playingMusicInfo, runMusic }) => {
       useEffect(() => {
             const handleResize = () => {
@@ -13,8 +12,8 @@ const MusicList = ({ nav, songs, playingMusicInfo, runMusic }) => {
             return () => removeEventListener("resize", handleResize);
       }, [nav]);
       return (
-            <motion.div className={`w-full [&::-webkit-scrollbar]:hidden sm:right-[0%] relative h-dvh sm:h-full cursor-pointer sm:bg-transparent p-5   ${playingMusicInfo.bgColor}`}>
-                  <h1 className={`text-4xl mb-2 font-semibold tracking-tight ${playingMusicInfo.textColor} rounded-3xl sm:hidden  py-2 leading-none uppercase`}>PlayList</h1>
+            <motion.div className={`w-full [&::-webkit-scrollbar]:hidden sm:right-[0%] relative h-dvh sm:h-full cursor-pointer sm:bg-transparent p-5  ${playingMusicInfo.bgColor}`}>
+                  <h1 className={`text-4xl mb-2 font-semibold tracking-tight ${playingMusicInfo.textColor} rounded-3xl sm:hidden  py-2 leading-none uppercase`}>playlist</h1>
                   <motion.span
                         whileTap={{ scale: 0.7 }}
                         onClick={() => {
@@ -35,4 +34,4 @@ const MusicList = ({ nav, songs, playingMusicInfo, runMusic }) => {
       );
 };
 
-export default MusicList;
+export default memo(MusicList);

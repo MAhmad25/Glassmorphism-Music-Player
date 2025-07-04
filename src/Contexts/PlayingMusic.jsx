@@ -9,7 +9,6 @@ const MusicPlaying = ({ children }) => {
       const [playingMusicInfo, setPlayingMusicInfo] = useState(songs[0]);
       const runMusic = (selectedMusicIndex) => {
             let selectedMusic = songs[selectedMusicIndex];
-            console.log("Selected Music Object: ", selectedMusic);
             const initializeMusic = new Audio(selectedMusic.audioPath);
             initializeMusic.preload = "auto";
             if (!currentMusicPlaying.paused) {
