@@ -1,20 +1,12 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Background from "./Components/Background";
 import { Analytics } from "@vercel/analytics/react";
 import Mice from "./Components/Mice";
 const App = () => {
       const [app, setApp] = useState(false);
-
-      useEffect(() => {
-            window.addEventListener("load", () => {
-                  setApp(true);
-            });
-            return () => {
-                  window.removeEventListener("load", () => {
-                        setApp(true);
-                  });
-            };
-      }, []);
+      window.addEventListener("load", () => {
+            setApp(true);
+      });
 
       return (
             <>
