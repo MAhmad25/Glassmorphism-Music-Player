@@ -1,1 +1,18 @@
 @import "tailwindcss";
+@font-face {
+      font-family: Primary;
+      src: url(/fonts/primary.woff2);
+}
+@font-face {
+      font-family: Secondary;
+      src: url(/fonts/secondary.woff2);
+}
+@theme {
+      --font-Primary: "Primary";
+      --font-Secondary: "Secondary";
+}
+
+.gradient {
+      background: rgb(39 39 42);
+      background: linear-gradient(180deg, rgb(232, 230, 230, 0.8) 0%, rgba(232, 230, 230, 1) 50%, rgb(39, 39, 42) 100%);
+}
