@@ -1,8 +1,6 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { GSDevTools } from "gsap/GSDevTools";
 import { useRef } from "react";
-gsap.registerPlugin(GSDevTools);
 const Preloader = () => {
       const cuttingLine = useRef(null);
       const listenRef = useRef(null);
@@ -23,10 +21,9 @@ const Preloader = () => {
                         "<"
                   )
                   .to(cuttingLine.current, { scaleY: 1 }, "-=0.8")
-                  .to(listenRef.current, { y: "2.5rem" })
+                  .to(cuttingLine.current, { autoAlpha: 0 })
+                  .to(listenRef.current, { y: "2.5rem" }, "-=.7")
                   .to(musicRef.current, { y: "-2.5rem" }, "<")
-                  // .to(cuttingLine.current, { scaleY: 0, transformOrigin: "bottom" }, "<")
-                  .to(cuttingLine.current, { autoAlpha: 0 }, "<")
                   .to(leftDiv.current, {
                         scaleY: 0,
                         ease: "expo.inOut",
@@ -40,7 +37,7 @@ const Preloader = () => {
                   {/* Left Div */}
                   <div ref={leftDiv} className="w-1/2 origin-top h-full flex justify-end pr-1 items-center  bg-zinc-800">
                         <div className="overflow-hidden pl-1">
-                              <h2 ref={listenRef} className="text-2xl sm:text-4xl -translate-y-10 text-zinc-200 font-Primary leading-none tracking-tighter">
+                              <h2 ref={listenRef} className="text-2xl sm:text-4xl -translate-y-10 text-zinc-200  font-Secondary leading-none tracking-tighter">
                                     Listen
                               </h2>
                         </div>
