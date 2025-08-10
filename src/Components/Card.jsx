@@ -18,7 +18,7 @@ function WaterShader({ imageUrl }) {
                         u_blueish: { value: 0 },
                         u_scale: { value: 5 },
                         u_illumination: { value: 1 },
-                        u_surfaceDistortion: { value: 0.12 },
+                        u_surfaceDistortion: { value: 1 },
                         u_waterDistortion: { value: 0.08 },
                   },
                   vertexShader: `
@@ -143,7 +143,7 @@ function WaterShader({ imageUrl }) {
       }, [texture]);
       useFrame(({ clock }) => {
             if (meshRef.current && meshRef.current.material.uniforms) {
-                  meshRef.current.material.uniforms.u_time.value = clock.elapsedTime * 2000;
+                  meshRef.current.material.uniforms.u_time.value = clock.elapsedTime * 3500;
             }
       });
       useMemo(() => {
