@@ -171,8 +171,6 @@ function WaterScene({ imageUrl }) {
 const Card = () => {
       const { playingMusicInfo } = useContext(PlayingMusic);
 
-      console.log("Rendering water distortion for:", playingMusicInfo?.image);
-
       return (
             <div className="h-72 sm:h-64 lg:h-80 xl:left-[60%] lg:left-[55%]  w-[80%] 2xl:w-[65%] absolute left-1/2 rounded-md -translate-y-1/2 -translate-x-1/2 top-1/2 sm:top-[54%] ">
                   <div className="absolute inset-0 rounded-md ">
