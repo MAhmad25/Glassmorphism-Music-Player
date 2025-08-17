@@ -35,7 +35,17 @@ const Preloader = () => {
                   {/* Line Cut */}
                   <div ref={cuttingLine} className="absolute origin-top scale-y-0 top-0 z-50 left-1/2 -translate-x-1/2 w-[1px] rounded-full h-full gradient "></div>
                   {/* Left Div */}
-                  <div ref={leftDiv} className="w-1/2 origin-top h-full flex justify-end pr-1 items-center  bg-zinc-800">
+                  <div ref={leftDiv} className="w-1/2 origin-top h-full flex justify-end pr-1 items-center  bg-black relative">
+                        <div
+                              className="absolute inset-0 z-0"
+                              style={{
+                                    backgroundImage: `
+          radial-gradient(circle at 100% 100%, rgb(150, 103, 48, 0.5) 0%, transparent 60%),
+          radial-gradient(circle at 100% 100%, rgb(150, 103, 48, 0.4) 0%, transparent 70%),
+          radial-gradient(circle at 100% 100%, rgb(150, 103, 48, 0.3) 0%, transparent 80%)
+        `,
+                              }}
+                        />
                         <div className="overflow-hidden pl-1">
                               <h2 ref={listenRef} className="text-2xl sm:text-4xl -translate-y-10 text-zinc-200  font-Secondary leading-none tracking-tighter">
                                     Listen
@@ -43,8 +53,18 @@ const Preloader = () => {
                         </div>
                   </div>
                   {/* Right Div */}
-                  <div ref={rightDiv} className="w-1/2 origin-top h-full flex items-center pl-1 bg-zinc-800">
-                        <div className="overflow-hidden pr-1 ">
+                  <div ref={rightDiv} className="w-1/2 origin-top h-full flex items-center pl-1 bg-black relative">
+                        <div
+                              className="absolute inset-0 z-0"
+                              style={{
+                                    backgroundImage: `
+          radial-gradient(circle at 0% 100%, rgb(150, 103, 48, 0.5) 0%, transparent 60%),
+          radial-gradient(circle at 0% 100%, rgb(150, 103, 48, 0.4) 0%, transparent 70%),
+          radial-gradient(circle at 0% 100%, rgb(150, 103, 48, 0.3) 0%, transparent 80%)
+        `,
+                              }}
+                        />
+                        <div className="overflow-hidden pr-1">
                               <h2 ref={musicRef} className="text-2xl sm:text-4xl translate-y-10 text-zinc-200 font-Secondary leading-none tracking-tighter">
                                     Music
                               </h2>
