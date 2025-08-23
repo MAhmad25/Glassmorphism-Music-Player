@@ -20,7 +20,7 @@ const Preloader = () => {
                         },
                         "<"
                   )
-                  .to(cuttingLine.current, { scaleY: 1 }, "-=0.8")
+                  .to(cuttingLine.current, { scaleY: 1 })
                   .to(cuttingLine.current, { autoAlpha: 0 })
                   .to(listenRef.current, { y: "2.5rem" }, "-=.7")
                   .to(musicRef.current, { y: "-2.5rem" }, "<")
