@@ -25,10 +25,10 @@ const Preloader = () => {
                   .to(listenRef.current, { y: "2.5rem" }, "-=.7")
                   .to(musicRef.current, { y: "-2.5rem" }, "<")
                   .to(leftDiv.current, {
-                        scaleY: 0,
+                        translateY: "-100%",
                         ease: "expo.inOut",
                   })
-                  .to(rightDiv.current, { scaleY: 0, ease: "expo.inOut" }, "-=0.95");
+                  .to(rightDiv.current, { translateY: "-100%", ease: "expo.inOut" }, "-=0.95");
       });
       return (
             <div ref={container} className="w-full h-full flex absolute top-0 z-50 left-0">
