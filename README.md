@@ -9,7 +9,7 @@ MusicApp is a simple application designed to manage and play your music collecti
 - **Playback Controls**: Play, pause, and skip your music.
 
 ## Installation
-
+You can install this website as an app because it supports PWA
 To install and run MusicApp, follow these steps:
 
 1. Clone the repository:
